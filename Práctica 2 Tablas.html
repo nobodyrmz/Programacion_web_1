@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2 Tablas</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <!--propiedades de las etiquetas (estilos) -->
+    <style type="text/css"> 
+        table {border: 3px solid blue; 
+                width: 75%; 
+             margin: auto; 
+                background: white;
+                color: black;}
+        h1{text-align: center;}
+        h2{text-align: center;}
+        th{ background: white;
+            color: black;
+            text-align: center;
+            border: 1px solid blue;} 
+        td{ background: white;
+            color: black;
+            text-align: justify;
+            border: 1px solid blue;} 
+        p{text-align: justify;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Electrónica</h1>
+        <h2>Lista de productos</h2>
+    </header>
+    <table> 
+        <caption>Uso de tablas</caption> <!-- Titulo de la tabla, por default las tablas no tienen bordes-->
+        <thead>
+            <tr>  <!-- Fila 1 -->
+                <th>Departamento</th>  <!-- Titulos de la primera fila (celdas) -->
+                <th width="6%">Codigo</th>
+                <th>Producto</th>
+                <th>Marca</th>
+                <th>Precio</th>
+                <th>Oferta Especial</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> <!-- Fila 2 -->
+                <td rowspan="2">Electrónica</td>
+                <td>129867</td>
+                <td>TV 40"</td>
+                <td>Samsung</td>
+                <td>$ 5699.00</td>
+                <td>12 MSI</td>
+            </tr>
+            <tr> <!-- Fila 3 -->
+                <td>129832</td>
+                <td>TV 60"</td>
+                <td>Samsung</td>
+                <td>$ 14599.00</td>
+                <td>12 MSI</td>
+            </tr>
+            <tr> <!-- Fila 4 -->
+                <td rowspan="3">Telefonía</td>
+                <td>129358</td>
+                <td>Smartphone</td>
+                <td>Motorola</td>
+                <td>$ 3697.00</td>
+                <td>13 MSI</td>
+            </tr>
+            <tr> <!-- Fila 5 -->
+             <td>129321</td>
+                <td>Smartphone</td>
+                <td>Samsung Galaxy</td>
+                <td>$ 6997.00</td>
+                <td>6 MSI</td>
+            </tr>
+            <tr> <!-- Fila 6 -->
+                 <td>138756</td>
+                <td>Teléfono inalámbrico</td>
+                <td>Motorola</td>
+                <td>$ 578.00</td>
+                <td>5% pago en efectivo</td>
+            </tr>
+            <tr> <!-- Fila 7 -->
+                <td rowspan="2">Computación</td>
+                <td>129329</td>
+                <td>Impresora</td>
+                <td>HP Ink Tank 115</td>
+                <td>$ 3176.00</td>
+                <td>12 MSI</td>
+            </tr>
+            <tr> <!-- Fila 8 -->
+                <td>129329</td>
+                <td>Mesa para laptop</td>
+                <td>Mainstays</td>
+                <td>$ 999.00</td>
+                <td>6 MSI</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+    <section>
+        <h2 style="text-align: left;">Sólo los mejores productos</h2>
+        <p>Encuentra audífonos, celulares, cámaras, accesorios para celulares, computadoras, tabletas,
+        artículos de oficina, electrónicos de oficina, instrumentos musicales, drones, cámaras de
+        seguridad, televisiones y mucho más. <br/></p>
+        <p>Te ofrecemos solo productos de calidad, las mejores marcas, el mejor servicio, la app más
+        confiable y todas las formas de pago, nuestro objetivo facilitar tu vida con la mejor calidad. <br/></p>
+        <p>Encuentra todo lo que necesita en el mejor lugar. <br/></p>
+    </section>
+    <section>
+        <h2 style="text-align: left;">Nuestras sucursales <br/></h2>
+        <ul>
+            <li>Centro</li>
+            <li>El Dorado</li>
+            <li>Plaza San Luis</li>
+            <li>Tangamanga</li>
+            <li>Citadella</li>
+            <li>Carranza</li>
+        </ul>
+    </section>
+    <footer>
+        <cite>https://super.walmart.com.mx/content/electronica/2910049 </cite>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
