@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog and Fish Care</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chatbot Landbot -->
+<script>
+  window.addEventListener('mouseover', initLandbot, { once: true });
+  window.addEventListener('touchstart', initLandbot, { once: true });
+  var myLandbot;
+  function initLandbot() {
+    if (!myLandbot) {
+      var s = document.createElement('script');
+      s.type = "module";
+      s.async = true;
+      s.addEventListener('load', function () {
+        myLandbot = new Landbot.Popup({
+          configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2930342-UQCTTHRKK5Y1GR3J/index.json',
+        });
+      });
+      s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  }
+</script>
+
+</head>
+<body>
+  <header>
+    <div class="logo">DOG AND FISH CARE</div>
+  </header>
+  <div class="navegacion">
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#mision-vision-historia">Información extra</a></li>
+        <li><a href="#reviews">Reseñas</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#title-np1">Sección de Ayuda</a></li>
+	      <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="cotizar.html">Cotizador</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Sección Banner -->
+  <section id="inicio" class="banner">
+    <div class="text-banner">
+  <h1>SOMOS LA MEJOR OPCIÓN PARA TUS MASCOTAS</h1>
+  <p>Calidad, confianza y variedad en productos para perros y peces.</p>
+  <!-- Agregar las imágenes de perro y pez -->
+  <div class="imagenes-banner">
+    <img src="images/perro.webp" alt="Perro" class="imagen-perro">
+    <img src="images/pez.webp" alt="Pez" class="imagen-pez">
+  </div>
+</div>
+    <div class="banimg"></div>
+  </section>
+
+  <!-- Sección Misión, Visión e Historia -->
+  <section id="mision-vision-historia">
+    <div class="mision-vision-historia-container">
+      <!-- Misión -->
+      <div class="mision">
+        <h2>Misión</h2>
+        <p>Nuestra misión es ofrecer productos de la más alta calidad para el cuidado de tus mascotas, tanto perros como peces. Trabajamos con marcas reconocidas para garantizar el bienestar de tus compañeros animales, proporcionando artículos que cubran todas sus necesidades y asegurando una experiencia de compra satisfactoria y accesible para todos.</p>
+      </div>
+
+      <!-- Visión -->
+      <div class="vision">
+        <h2>Visión</h2>
+        <p>Convertirnos en el líder en la industria de productos para mascotas, siendo reconocidos por nuestra dedicación al bienestar animal, innovación constante y atención al cliente. Queremos ser la primera opción en la mente de nuestros clientes al momento de elegir productos para el cuidado de perros y peces, creando una comunidad comprometida con el bienestar de las mascotas.</p>
+      </div>
+
+      <!-- Historia -->
+      <div class="historia">
+        <h2>Historia</h2>
+        <p>Fundada en 2010, Dog and Fish Care nació con el objetivo de cubrir una creciente demanda de productos de calidad para mascotas. Comenzamos con una pequeña tienda en línea que ofrecía productos básicos para perros y peces, y con el tiempo hemos expandido nuestro catálogo para incluir todo tipo de artículos especializados. Hoy en día, somos una empresa consolidada con miles de clientes satisfechos, comprometidos con ofrecer solo lo mejor para las mascotas.</p>
+      </div>
+    </div>
+  </section>
+</section>
+  <!-- Sección de Productos -->
+  <section id="productos" class="productos">
+    <div id="title-np"><h2>Nuestros Productos</h2></div>
+    <div class="categoria">
+      <h3>Fish Products</h3>
+      <div class="producto">
+        <img src="images/1.png" alt="Imagen 1">
+        <h3>NEUTRA STRESS 30 ML. PARA PECES</h3>
+        <p class="precio">$45</p>
+      </div>
+      <div class="producto">
+        <img src="images/2.png" alt="Imagen 2">
+        <h3>Descontaminador de agua</h3>
+        <p class="precio">$100</p>
+      </div>
+      <div class="producto">
+        <img src="images/3.png" alt="Imagen 3">
+        <h3>Regyulador de PH</h3>
+        <p class="precio">$75</p>
+      </div>
+      <div class="producto">
+        <img src="images/4.webp" alt="Imagen 4">
+        <h3>Lomas ANILLOS DE CERAMICA 450 G</h3>
+        <p class="precio">$150</p>
+      </div>
+      <div class="producto">
+        <img src="images/5.webp" alt="Imagen 5">
+        <h3>Anillos de ceramica economico</h3>
+        <p class="precio">$100</p>
+      </div>
+      <div class="producto">
+        <img src="images/6.webp" alt="Imagen 6">
+        <h3>Anillos de ceramica super economico</h3>
+        <p class="precio">$70</p>
+      </div>
+      <div class="producto">
+        <img src="images/7.jpeg" alt="Imagen 7">
+        <h3>Alimento Axolotl Sticks Anfibios <br>Acuáticos 135gr Tropical Tropical TP-11614</h3>
+        <p class="precio">$300</p>
+      </div>
+      <div class="producto">
+        <img src="images/8.jpeg" alt="Imagen 8">
+        <h3>Alimento Axolotl Sticks Anfibios <br>Acuáticos 300gr Tropical Tropical TP-11614</h3>
+        <p class="precio">$550</p>
+      </div>
+      <div class="producto">
+        <img src="images/9.webp" alt="Imagen 9">
+        <h3>Alimento Sunny Tropical <br> Premium Food Peces 90g Sff-04</h3>
+        <p class="precio">$85</p>
+      </div>
+      <div class="producto">
+        <img src="images/11.webp" alt="Imagen 11">
+        <h3>Alimento para pescado por granel</h3>
+        <p class="precio">$60/kg</p>
+      </div>
+      <div class="producto">
+        <img src="images/13.webp" alt="Imagen 13">
+        <h3>Mezlca de semillas para loros y cacatuas</h3>
+        <p class="precio">$159</p>
+      </div>
+      <div class="producto">
+        <img src="images/14.webp" alt="Imagen 14">
+        <h3>Semillas para aves</h3>
+        <p class="precio">$50/kg</p>
+      </div>
+      <div class="producto">
+        <img src="images/15.jpg" alt="Imagen 15">
+        <h3>ALIMENTO TROPICAL FLAKES PREMIUM FOOD</h3>
+        <p class="precio">$1500</p>
+      </div>
+    </div>
+
+    <div class="categoria">
+      <h3> Dog Products</h3>
+      <div class="producto">
+        <img src="images/16.png" alt="Imagen 16">
+      </div>
+      <div class="producto">
+        <img src="images/17.jpg" alt="Imagen 17">
+      </div>
+      <div class="producto">
+        <img src="images/18.webp" alt="Imagen 18">
+        <h3>SUNNY Transportadora para Perros <br> y Gatos de hasta 5 kg, economica, <br>Puerta Metalica, 45X30X29cm, Color Azul</h3>
+        <p class="precio">$700</p>
+      </div>
+      <div class="producto">
+        <img src="images/21.webp" alt="Imagen 21">
+        <h3>Nature 4Pets Talco Quita Olores con <br>Aroma Agradable para Perros y Gatos, <br>Multi Usos 100gr.</h3>
+        <p class="precio">$259</p>
+      </div>
+      <div class="producto">
+        <img src="images/22.webp" alt="Imagen 22">
+        <h3>Perfect Sense Sensitive Alimento Super Premium <br> para Perro Toda Las Razas Todas Las Edades Piel <br>y Estomago Sensible con Salmón de 7 KG</h3>
+        <p class="precio">$1000</p>
+      </div>
+      <div class="producto">
+        <img src="images/23.webp" alt="Imagen 23">
+        <h3>Alimento para perro por granel</h3>
+        <p class="precio">$70/kg</p>
+      </div>
+      <div class="producto">
+        <img src="images/25.webp" alt="Imagen 25">
+        <h3>PEDIGREE Adult Grilled Steak <br>and Vegetable Flavor Dry Dog Food 20.4 Pounds</h3>
+        <p class="precio">$1700</p>
+      </div>
+      <div class="producto">
+        <img src="images/28.png" alt="Imagen 28">
+        <h3>Kibbles ‘n Bits® Original Savory Beef <br> & Chicken Flavors Dry Dog Food</h3>
+        <p class="precio">$1800</p>
+      </div>
+      <div class="producto">
+        <img src="images/29.png" alt="Imagen 29">
+        <h3>Kibbles ‘n Bits® Original Savory Beef <br> & Chicken Flavors Dry Dog Food mini</h3>
+        <p class="precio">$1200</p>
+      </div>
+      <div class="producto">
+        <img src="images/31.png" alt="Imagen 31">
+        <h3>Kibbles 'n Bits® Mini Bits - <br>Alimento seco para perros de razas pequeñas <br> con sabores sabrosos de res y pollo</h3>
+        <p class="precio">$1000</p>
+      </div>
+      <div class="producto">
+        <img src="images/32.png" alt="Imagen 32">
+        <h3>Kibbles 'n Bits® Mini Bits - <br>Alimento seco para perros de razas pequeñas <br> con sabores sabrosos de res y pollo mini</h3>
+        <p class="precio">$800</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Reseñas -->
+  <section id="reviews" class="reviews">
+    <h2>Reseñas y comentarios</h2>
+     <!-- Sección Blog -->
+    <section id="blog" class="blog-section">
+      <h2>Blog - Consejos y Novedades</h2>
+      <iframe src="https://dogandfishcarep.blogspot.com/" width="100%" height="600" frameborder="0"></iframe>
+    </section>
+  </section>
+  
+
+  <!-- Sección ayuda -->  
+  <div class="seccion_ayuda">
+    <div id="title-np1"><h2>Sección de Ayuda</h2>
+    </div>
+  <section id="preguntasf">
+    <div id="title-np"><h2>Preguntas Frecuentes</h2></div>
+    <div id="preguntasff">
+<details>
+  <summary>¿Cómo puedo encontrar productos específicos para mi mascota en el sitio?</summary>
+  <p>Puedes utilizar la barra de búsqueda ubicada en la parte superior del sitio e ingresar palabras clave relacionadas con el producto. También puedes navegar por las categorías según el tipo de mascota.</p>
+</details>
+
+<details>
+  <summary>¿Qué debo hacer si un producto no tiene descripción o imagen completa?</summary>
+  <p>Te recomendamos contactarnos a través del formulario de contacto o nuestro chat en línea. Estaremos encantados de proporcionarte la información adicional que necesites.</p>
+</details>
+
+<details>
+  <summary>¿Ofrecen envíos a domicilio y cuáles son los costos asociados?</summary>
+  <p>Sí, realizamos envíos a domicilio. El costo del envío varía según la ubicación y el monto de la compra. Puedes ver el costo final en el carrito antes de finalizar tu compra.</p>
+</details>
+
+<details>
+  <summary>¿Cómo puedo dejar una reseña sobre un producto que compré?</summary>
+  <p>Una vez que recibas tu pedido, puedes ingresar a tu cuenta, ir al historial de compras y seleccionar el producto para dejar tu reseña.</p>
+</details>
+
+<details>
+  <summary>¿Cuál es el tiempo de respuesta después de enviar un mensaje en la sección de contacto?</summary>
+  <p>Normalmente respondemos en un plazo de 24 a 48 horas hábiles. Nuestro equipo de atención al cliente trabaja de lunes a viernes.</p>
+</details>
+
+<details>
+  <summary>¿Hay una tienda física además de la tienda en línea? ¿Cuál es su horario de atención?</summary>
+  <p>Sí, contamos con una tienda física. Nuestro horario de atención es de lunes a sábado, de 9:00 a.m. a 6:00 p.m. Puedes encontrar la dirección exacta en la sección de contacto del sitio.</p>
+</details>
+
+<details>
+  <summary>¿Qué métodos de pago están disponibles para realizar compras?</summary>
+  <p>Aceptamos pagos con tarjetas de crédito, débito, transferencias bancarias y servicios de pago en línea como PayPal y MercadoPago.</p>
+</details>
+
+<details>
+  <summary>¿Cómo sé si un producto para peces es compatible con mi tipo de acuario?</summary>
+  <p>En la descripción de cada producto se indican las especificaciones y compatibilidad. Si tienes dudas, puedes escribirnos y con gusto te asesoramos.</p>
+</details>
+
+<details>
+  <summary>¿Ofrecen asesoría para elegir productos adecuados según la raza o tamaño de mi perro?</summary>
+  <p>Sí, contamos con personal capacitado que puede ayudarte a elegir los productos más adecuados según las características de tu mascota. Puedes contactarnos por WhatsApp, correo o chat en línea.</p>
+</details>
+
+<details>
+  <summary>¿Qué debo hacer si recibo un producto dañado o incorrecto?</summary>
+  <p>Por favor, contáctanos inmediatamente con tu número de pedido y evidencia del problema (fotos o videos). Te daremos una solución lo antes posible, ya sea cambio o reembolso.</p>
+</details>
+
+<details>
+  <summary>¿Los precios de los productos "por kilo" incluyen envío o tienen un mínimo de compra?</summary>
+  <p>Los precios por kilo no incluyen el envío, a menos que la promoción indique lo contrario. Algunos productos pueden requerir un mínimo de compra. Esta información estará detallada en la página del producto.</p>
+</details>
+
+<details>
+  <summary>¿Dónde puedo ver más imágenes de los productos en la galería?</summary>
+  <p>En la página de cada producto encontrarás una galería de imágenes que puedes explorar deslizando o haciendo clic en las miniaturas. Si necesitas más imágenes, puedes solicitarlas a través del chat.</p>
+</details>
+
+<details>
+  <summary>¿Tienen garantía o política de devolución para los productos?</summary>
+  <p>Sí, ofrecemos garantía en todos nuestros productos. Puedes consultar nuestra política de devoluciones en la sección correspondiente del sitio. Asegúrate de conservar tu comprobante de compra.</p>
+</details>
+
+<details>
+  <summary>¿Cómo actualizo mi información de contacto si cometí un error en el formulario?</summary>
+  <p>Si ya enviaste el formulario con un error, puedes escribirnos directamente por correo o a través del chat en línea para actualizar tus datos correctamente.</p>
+</details>
+
+<details>
+  <summary>¿Ofrecen descuentos por compras al por mayor o programas de fidelización?</summary>
+  <p>Sí, tenemos precios especiales para compras al por mayor y un programa de fidelización con puntos y beneficios exclusivos para nuestros clientes frecuentes. Consulta los detalles en la sección de promociones.</p>
+</details>
+    </div>
+  </section>
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <form action="https://formsubmit.co/186794@upslp.edu.mx" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+      <input type="hidden" name="_captcha" value="false">
+    </form>
+  </section>
+    <section id="mapa">
+      <div id="title-np"><h2>Mapa y ubicacion de Dog and Fish Care: </h2></div>
+      <div class="mapax">
+      <iframe class="mapaiframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.197304768448!2d-101.00261972471161!3d22.156560379790232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a9f4bd149893b%3A0x6c5c9e6044330c28!2sDog%20%26%20Fish%20Care!5e0!3m2!1ses-419!2smx!4v1743973670454!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+      </div>
+    </section>
+  </div>
+    <footer class="footer-container">
+          <div class="footer-section">
+              <h3>Estamos ubicados</h3>
+              <img src="https://png.pngtree.com/png-vector/20230106/ourmid/pngtree-flat-red-location-sign-png-image_6553065.png" alt="Imagen Mapa">
+              <p>Av. ProL Muñoz 136<br>
+              Col del Valle<br>
+              78250 San Luis Potosí, S.L.P.</p>
+          </div>
+          <div class="footer-section">
+              <h3>Contactanos en Nuestras Redes Sociales</h3>
+              <div class="contact-info">
+              <div id="footer-imgs">
+                <img src="https://images.vexels.com/media/users/3/141328/isolated/lists/be7f7eb1f18933369cf644f87bc8c74b-icono-de-telefono-redondo.png" alt="Imagen Telefono">
+                <p>444 811 4962</p>  
+                <img src="https://www.pngplay.com/wp-content/uploads/6/Email-Logo-Transparent-Background.png" alt="Imagen E-Mail">
+                <br><p>dogfisherare@hotmail.com</p>
+                <img src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" alt="Imagen Facebook">
+                <br><p>Dog & Fish Care</p>
+                <img src="https://1000marcas.net/wp-content/uploads/2019/11/Instagram-Logo.png" alt="Imagen Instagram">
+                <br><p>fishcareaquarium</p>
+                <br><p>Proyecto desarrollado para acreditar la materia de Programación web 1 (UPSLP, ITI)</p>
+              </div>
+              </div>
+          </div>
+    </footer>
+</body>
+</html>

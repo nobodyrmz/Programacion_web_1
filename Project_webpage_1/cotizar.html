@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cotizador de Productos - Dog and Fish Care</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Librerías de JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="logo">DOG AND FISH CARE</div>
+  </header>
+
+  <div class="navegacion">
+    <nav>
+      <ul>
+        <li><a href="index.html">Volver al Inicio</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Cotizador de productos -->
+  <section class="contacto" style="max-width: 800px; margin: 30px auto;">
+    <h2 style="text-align: center; color: #001f3f;">Cotizador de Productos</h2>
+
+    <form id="formPresupuesto" class="form-cotizador">
+      <!-- Datos personales -->
+      <div class="grupo-formulario">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <!-- Productos -->
+      <div class="grupo-formulario">
+        <label>Productos:</label>
+
+        <!-- Categoría Peces -->
+        <details open class="categoria-cotizador">
+          <summary>🐟 Productos para Peces</summary>
+          <div class="producto-cotizacion">
+            <select name="producto1" class="select-producto">
+              <option value="">Seleccione un producto</option>
+              <option value="45">NEUTRA STRESS 30 ML. ($45)</option>
+              <option value="100">Descontaminador de agua ($100)</option>
+              <option value="75">Regulador de PH ($75)</option>
+              <option value="150">Anillos de cerámica 450g ($150)</option>
+              <option value="100">Anillos de cerámica económico ($100)</option>
+              <option value="70">Anillos super económicos ($70)</option>
+              <option value="300">Alimento Axolotl 135g ($300)</option>
+              <option value="550">Alimento Axolotl 300g ($550)</option>
+              <option value="85">Sunny Tropical 90g ($85)</option>
+              <option value="60">Alimento granel ($60/kg)</option>
+              <option value="1500">Tropical Flakes Premium ($1500)</option>
+            </select>
+            <input type="number" min="1" value="1" class="cantidad">
+          </div>
+        </details>
+
+        <!-- Categoría Perros -->
+        <details open class="categoria-cotizador">
+          <summary>🐶 Productos para Perros</summary>
+          <div class="producto-cotizacion">
+            <select name="producto2" class="select-producto">
+              <option value="">Seleccione un producto</option>
+              <option value="700">Transportadora hasta 5kg ($700)</option>
+              <option value="259">Talco Quita Olores ($259)</option>
+              <option value="1000">Alimento Perfect Sense 7kg ($1000)</option>
+              <option value="70">Alimento perro granel ($70)</option>
+              <option value="1700">PEDIGREE Grilled Steak ($1700)</option>
+              <option value="1800">Kibbles ‘n Bits® Original ($1800)</option>
+              <option value="1200">Kibbles ‘n Bits® Mini ($1200)</option>
+              <option value="1000">Kibbles Mini Bits ($1000)</option>
+              <option value="800">Kibbles Mini Bits ($800)</option>
+            </select>
+            <input type="number" min="1" value="1" class="cantidad">
+          </div>
+        </details>
+
+        <!-- Botón para añadir otro -->
+        <button type="button" class="boton-secundario">+ Añadir otro producto</button>
+      </div>
+
+      <!-- Métodos de pago y comentarios -->
+      <div class="grupo-formulario">
+        <label for="tipo-pago">Método de pago:</label>
+        <select id="tipo-pago" name="tipo-pago" required>
+          <option value="">Seleccione...</option>
+          <option>Tarjeta de crédito</option>
+          <option>Transferencia bancaria</option>
+          <option>Efectivo</option>
+        </select>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="fecha">Fecha requerida:</label>
+        <input type="date" id="fecha" name="fecha" required>
+      </div>
+
+      <div class="grupo-formulario">
+        <label for="comentarios">Instrucciones especiales:</label>
+        <textarea id="comentarios" rows="4"></textarea>
+      </div>
+
+      <!-- Total -->
+      <div class="grupo-formulario total-acumulado">
+        <label>Total estimado:</label>
+        <div id="total-cotizacion">$0.00</div>
+      </div>
+
+      <!-- Botones -->
+      <div class="grupo-botones">
+        <button type="submit" class="boton-primario" onclick="generarPDF"()>Enviar cotización</button>
+        <button type="reset" class="boton-secundario">Borrar todo</button>
+        <button type="reset" class="boton-terciario" onclick="descargarPDF()">Descargar PDF</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer-container">
+    <div class="footer-section">
+      <h3>Estamos ubicados</h3>
+      <img src="https://png.pngtree.com/png-vector/20230106/ourmid/pngtree-flat-red-location-sign-png-image_6553065.png" alt="Imagen Mapa">
+      <p>Av. ProL Muñoz 136<br>Col del Valle<br>78250 San Luis Potosí, S.L.P.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Contáctanos en nuestras redes</h3>
+      <div class="contact-info" id="footer-imgs">
+        <img src="https://images.vexels.com/media/users/3/141328/isolated/lists/be7f7eb1f18933369cf644f87bc8c74b-icono-de-telefono-redondo.png" alt="Teléfono">
+        <p>444 811 4962</p>  
+        <img src="https://www.pngplay.com/wp-content/uploads/6/Email-Logo-Transparent-Background.png" alt="Email">
+        <p>dogfisherare@hotmail.com</p>
+        <img src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png" alt="Facebook">
+        <p>Dog & Fish Care</p>
+        <img src="https://1000marcas.net/wp-content/uploads/2019/11/Instagram-Logo.png" alt="Instagram">
+        <p>fishcareaquarium</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enlace a JS -->
+  <script src="script.js"></script>
+</body>
+</html>
